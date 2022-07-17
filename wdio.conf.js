@@ -138,6 +138,7 @@ exports.config = {
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
+        require: ['@babel/register'],
         // <string[]> (file/dir) require files before executing features
         require: ['./features/step-definitions/steps.js'],
         // <boolean> show full backtrace for errors
