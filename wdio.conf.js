@@ -22,7 +22,7 @@ exports.config = {
     //
     specs: [
         // './features/**/*.feature'
-        'features/login.feature'
+        './features/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -141,7 +141,7 @@ exports.config = {
     cucumberOpts: {
         require: ['@babel/register'],
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.js'],
+        require: ['./stepDefs/*.js'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
