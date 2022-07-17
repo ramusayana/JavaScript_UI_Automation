@@ -21,8 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        // './features/**/*.feature'
-        './features/*.feature'
+        './features/**/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -95,7 +94,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://automationbro.com/',
+    baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -139,9 +138,8 @@ exports.config = {
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
-        require: ['@babel/register'],
         // <string[]> (file/dir) require files before executing features
-        require: ['./stepDefs/*.js'],
+        require: ['./features/step-definitions/steps.js'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
