@@ -13,5 +13,6 @@ When(/^I login with (\w+) and (.+)$/, async (username, password) => {
 Then(/^I should see a flash message saying (.*)$/, async (message) => {
     await expect($('#flash')).toBeExisting();
     await expect($('#flash')).toHaveTextContaining(message);
+    await expect(browser).toHaveTitle('The Internet');
 });
 
